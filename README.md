@@ -1,2 +1,5 @@
 # JavaScript-Projects
-All the basic Projects of JavaScript Like Timer . . .
+
+**Projects included : 
+
+1. Timer (09-01-2021)
