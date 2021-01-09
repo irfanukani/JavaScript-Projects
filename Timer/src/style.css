@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Quicksand;
+}
+
+.container {
+    padding-top: 100px;
+    height: 100vh;
+    background : url(https://images.unsplash.com/photo-1564303449-b4a1a1ba2037?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80) no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+.content h1{
+    font-size: 54px;
+}
+
+.content p{
+    font-size: 25px;
+    margin-top: 10px;
+    display: inline;
+}
+
+.timer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 70px;
+}
+
+.days , .hours , .mins , .seconds{
+    padding: 50px 70px;
+    background: rgba(219, 227, 255, 0.178);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.days {
+    border-radius: 30px 0 0 30px;
+}
+
+.seconds {
+    border-radius: 0 30px 30px 0;
+}
+
+.footer {
+    position: relative;
+    
+}
+
+.footer{
+    margin: 200px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer p{
+    font-size: 20px;
+}
+
+.footer a{
+    color: white;
+}
