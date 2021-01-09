@@ -17,16 +17,16 @@ function Timer() {
   var minutes = Math.floor((Time % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((Time % (1000 * 60)) / 1000);
 
-  if (days <= 9) {
+  if (days < 10) {
     days = "0" + days;
   }
-  if (hours <= 9) {
+  if (hours < 10) {
     hours = "0" + hours;
   }
-  if (minutes <= 9) {
+  if (minutes < 10) {
     minutes = "0" + minutes;
   }
-  if (seconds <= 9) {
+  if (seconds < 10) {
     seconds = "0" + seconds;
   }
 
