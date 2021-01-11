@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.3/css/all.min.css">
+    <title>To Do App | Vanila JavaScript</title>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4"> <i class="fas fa-air-freshener text-warning"></i> My <span class="text-warning">Todo
+            </span>App
+        </h1>
+        <form id="todo-form">
+            <div class="form-group mt-5">
+                <label for="task">Task</label><input type="text" id="task" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="due">Due Date</label><input type="date" id="due" class="form-control">
+            </div>
+            <input type="submit" value="Add Task" class="btn btn-outline-warning btn-block">
+        </form>
+
+        <table class="table table-stripped mt-5">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id='todo-list'>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
