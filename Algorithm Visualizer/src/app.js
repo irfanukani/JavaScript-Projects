@@ -11,12 +11,33 @@ class UI {
   static getData() {
     var Selection = document.getElementById("algo");
     var Data = document.getElementById("exampleTextarea");
-
+    var checkButton = document.getElementById("chk");
     const _data = {};
     _data.Algorithm = Selection.value;
-    _data.Array = Data.value;
 
-    console.log("a");
+    if (checkButton.checked) {
+      _data.Array = [
+        Math.floor(Math.random() * 100),
+        Math.floor(Math.random() * 100),
+        Math.floor(Math.random() * 100),
+        Math.floor(Math.random() * 100),
+        Math.floor(Math.random() * 100),
+        Math.floor(Math.random() * 100),
+        Math.floor(Math.random() * 100),
+      ];
+    } else {
+      var temp = [];
+
+      temp = Data.value.split(" ");
+
+      const Temp = temp.map((el) => {
+        return parseInt(el);
+      });
+
+      _data.Array = Temp;
+    }
+
+    console.log(_data);
     return _data;
   }
 
@@ -29,14 +50,14 @@ class UI {
     if (Selection.value !== "check") {
       Selection.classList.add("is-valid");
     } else {
-      return Selection.classList.add("is-invalid");
+      Selection.classList.add("is-invalid");
     }
 
     if (checkButton.checked == false && Data.value == "") {
       Data.classList.add("is-invalid");
     } else {
       app.innerHTML = "";
-
+      Data.classList.add("is-valid");
       const formData = UI.getData();
 
       UI.DisplayAlgorithm(formData);
