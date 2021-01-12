@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="/stylesheet/style.css">
     <title>Algorithm Visualizer</title>
 </head>
 
 <body>
+
     <div class="row">
-        <div class="col- ">
+        <div class="col- " id='main-col'>
             <div class="container p-5 ">
                 <h2 class="mt-2"> <i class="fa fa-wave-square text-info"></i> Algorithm <span
                         class="text-info">Visualizer</span>
@@ -32,7 +33,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="exampleTextarea">Enter Integers <span class="text-black-50">( space
+                        <label for="exampleTextarea">Enter Integers <span>( space
                                 seperated)</span></label>
                         <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
                     </div>
@@ -44,17 +45,25 @@
                     </div>
 
                     <button class="btn btn-block btn-primary mt-5" id="btn" type="submit">VISUALIZE</button>
+                    <button type="button" class="btn btn-outline-primary mt-5" id="theme">Change Theme</button>
+                    <p class="text-info mt-5">Left Pointer
+                        <span class="pl-5 text-danger">Right Pointer</span>
+                    </p>
                 </form>
             </div>
         </div>
+
         <div class="col-lg">
-            <div class="bg-light min-vh-100 w-auto d-flex justify-content-center align-items-center" id="app">
-                <div class="spinner-grow text-primary" role="status" id='loader'>
+            <div class="bg-light h-100 d-flex justify-content-center align-items-center" id="app">
+                <div class="spinner-grow text-success" role="status" id='loader'>
                     <span class="sr-only">Loading...</span>
                 </div>
             </div>
         </div>
+
+
         <script src="app.js"></script>
+        <script src="theme.js"></script>
 </body>
 
 </html>
